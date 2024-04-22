@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import NavLink from "./navLink";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
+import { topVariants, middleVariants, bottomVariants, listVariants, listItemVariants } from "./variants";
 
 const links = [
     { title: "Home", url: "/" },
@@ -21,51 +22,6 @@ const socials = [
 ];
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-
-    const topVariants = {
-        closed: { rotate: 0 },
-        opened: {
-            rotate: 45,
-            backgroundColor: "rgb(255,255,255)"
-        },
-    };
-
-    const middleVariants = {
-        closed: { opacity: 1 },
-        opened: {
-            opacity: 0,
-        },
-    };
-
-    const bottomVariants = {
-        closed: { rotate: 0 },
-        opened: {
-            rotate: -45,
-            backgroundColor: "rgb(255,255,255)"
-        },
-    };
-
-    const listVariants = {
-        closed: { x: "100vw" },
-        opened: {
-            x: 0,
-            transition: {
-                when: "beforeChildren",
-                staggerChildren: 0.2
-            },
-        }
-    };
-
-    const listItemVariants = {
-        closed: {
-            x: -10,
-            opacity: 0
-        },
-        opened: {
-            x: 0,
-            opacity: 1
-        }
-    }
     return (
         <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
             {/* LINKS */}
