@@ -10,8 +10,8 @@ const Homepage = () => {
     transition={{ duration: 1 }}>
     <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* IMAGE CONTAINER */}
-      <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-        <Image src="/hero_anime.png" alt="hero" fill className="object-contain" />
+      <div className="h-1/2 opacity-60 xl:opacity-100 lg:opacity-100 lg:h-full lg:w-1/2 relative">
+        <Image src="/hero_anime.png" alt="hero" fill className="object-contain" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
       </div>
       {/* TEXT CONTAINER */}
       <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
