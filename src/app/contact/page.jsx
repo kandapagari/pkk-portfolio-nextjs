@@ -8,7 +8,7 @@ const ContactPage = () => {
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
         >
-            ContactPage
+            WORK IN PROGRESS: ContactPage
         </motion.div>
     );
 }

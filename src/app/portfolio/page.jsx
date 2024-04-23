@@ -8,7 +8,7 @@ const PortfolioPage = () => {
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
         >
-            PortfolioPage
+            WORK IN PROGRESS: PortfolioPage
         </motion.div>);
 }
 

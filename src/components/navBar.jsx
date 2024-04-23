@@ -6,6 +6,7 @@ import { useState } from "react";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import { topVariants, middleVariants, bottomVariants, listVariants, listItemVariants } from "./variants";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const links = [
     { title: "Home", url: "/" },
@@ -14,11 +15,11 @@ const links = [
     { title: "Contact", url: "/contact" },
 ];
 const socials = [
-    { title: "github", url: "https://www.github.com/kandapagari" },
-    { title: "linkedin", url: "https://www.linkedin.com/in/kandapagari" },
-    { title: "twitter", url: "https://www.twitter.com/zephyr_347" },
-    { title: "instagram", url: "https://www.instagram.com/abhimanyu_pavan" },
-    { title: "facebook", url: "https://www.facebook.com/abhi619pavan" },
+    { title: "github", url: "https://www.github.com/kandapagari", icon: FaGithub },
+    { title: "linkedin", url: "https://www.linkedin.com/in/kandapagari", icon: FaLinkedin },
+    { title: "twitter", url: "https://www.twitter.com/zephyr_347", icon: FaTwitter },
+    { title: "instagram", url: "https://www.instagram.com/abhimanyu_pavan", icon: FaInstagram },
+    { title: "facebook", url: "https://www.facebook.com/abhi619pavan", icon: FaFacebook },
 ];
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -48,7 +49,8 @@ const Navbar = () => {
             <div className="hidden md:flex gap-4 w-1/3">
                 {socials.map(social => (
                     <Link href={social.url} key={social.title} target="_blank">
-                        <Image src={`/${social.title}.png`} alt={social.title} width={24} height={24} />
+                        <social.icon />
+                        {/* <Image src={`/${social.title}.png`} alt={social.title} width={24} height={24} /> */}
                     </Link>
                 ))}
             </div>
